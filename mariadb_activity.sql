@@ -21,8 +21,11 @@ CREATE TABLE courses (
     description VARCHAR(255),
     units INT
 );
+INSERT INTO course (course_id, course_name, description, units)
+    -> VAlUES
+    -> (123, 'BSIT','Description', 69),
+    -> (456, 'BSCS','Description', 70),
+    -> (789, 'BSDA','Description', 71);
 
-SELECT * FROM students;
-
-SELECT * FROM courses;
+SELECT * FROM course;
 
