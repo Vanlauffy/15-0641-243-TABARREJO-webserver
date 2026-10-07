@@ -13,7 +13,7 @@ INSERT INTO students (name, course, year_level)
 VALUES
 ('Juan Dela Cruz', 'BSIT', 1),
 ('Maria Santos', 'BSCS', 2),
-('Pedro Reyes', 'BSIT', 3);
+('Pedro Reyes', 'BSDA', 3);
 
 CREATE TABLE courses (
     course_id INT AUTO_INCREMENT PRIMARY KEY,
