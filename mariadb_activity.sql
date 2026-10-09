@@ -23,9 +23,9 @@ CREATE TABLE courses (
 );
 INSERT INTO course (course_id, course_name, description, units)
     -> VAlUES
-    -> (123, 'BSIT','Description', 69),
-    -> (456, 'BSCS','Description', 70),
-    -> (789, 'BSDA','Description', 71);
+    -> (123, 'BSIT','Webtech', 69),
+    -> (456, 'BSCS','Comsci', 70),
+    -> (789, 'BSDA','DataAnlytics', 71);
 
 SELECT * FROM course;
 
