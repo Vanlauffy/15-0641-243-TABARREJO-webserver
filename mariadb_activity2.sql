@@ -46,39 +46,3 @@ INSERT INTO enrollments (student_id, course_id, enrollment_date) VALUES
 (4, 3, '2026-10-07'),
 (5, 2, '2026-10-07'),
 (5, 4, '2026-10-07');
-
--- Task 1: Display all students enrolled in a particular course (e.g., 'Web Development')
-SELECT students.id, students.name, courses.course_name 
-FROM enrollments
-JOIN students ON enrollments.student_id = students.id
-JOIN courses ON enrollments.course_id = courses.course_id
-WHERE courses.course_name = 'Web Development';
-
--- Task 2: Display all courses taken by a particular student (e.g., 'Juan Dela Cruz')
-SELECT courses.course_id, courses.course_name, students.name 
-FROM enrollments
-JOIN students ON enrollments.student_id = students.id
-JOIN courses ON enrollments.course_id = courses.course_id
-WHERE students.name = 'Juan Dela Cruz';
-
--- Task 3: Count the number of students enrolled in each course
-SELECT courses.course_name, COUNT(enrollments.student_id) AS number_of_students
-FROM courses
-LEFT JOIN enrollments ON courses.course_id = enrollments.course_id
-GROUP BY courses.course_id, courses.course_name;
-
--- Task 4: Display the course with the highest number of students
-SELECT courses.course_name, COUNT(enrollments.student_id) AS number_of_students
-FROM courses
-LEFT JOIN enrollments ON courses.course_id = enrollments.course_id
-GROUP BY courses.course_id, courses.course_name
-ORDER BY number_of_students DESC
-LIMIT 1;
-
--- Task 5: Display students alphabetically
-SELECT * FROM students
-ORDER BY name ASC;
-
--- Task 6: Display the total number of enrollments
-SELECT COUNT(*) AS total_enrollments 
-FROM enrollments;
